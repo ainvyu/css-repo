@@ -16,7 +16,7 @@ a:hover { background-color: #def; }
 h1, h2 { font-family: Helvetica, Arial, sans-serif; }
 h1 { font-size: 2.5em; margin-top: 0; }
 h2 { font-size: 1.6em; font-weight: normal; }
-#nav { color: #333; }
+#nav { z-index:9999; color: #333; }
 #nav a { color: #333; text-decoration: underline; }
 #nav a:hover { background-color: transparent; }
 form p { margin: 0; text-indent: 0; }
