@@ -91,6 +91,9 @@ li.line {
 		margin-left:10px;
 		display:inline-block;
 	}
+	#msg { 
+		width: 80%; 
+	}
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -127,6 +130,9 @@ li.line {
 		width:80%;
 		margin-left:10px;
 		display:inline-block;
+	}
+	#msg { 
+		width: 80%; 
 	}
 }
 
@@ -174,10 +180,9 @@ li.line {
 		margin-left:5px;
 		display:inline-block;
 	}
-}
-
-#msg { 
-    width: 80%; 
+	#msg { 
+		width: 60%; 
+	}
 }
 
 #update a { 
