@@ -141,11 +141,8 @@ li.line {
 @media only screen and (max-device-width: 480px) {
     #navbar { 
         position: static; 
-        padding: 10px; 
         text-align: center; 
     }
-    .time { display: none; }
-    #msg { width: 100%; }
 	div.log_line {
 		position:relative;
 		height:100%;
@@ -185,6 +182,11 @@ li.line {
 	#msg { 
 		width: 60%; 
 	}
+}
+
+#say-box {
+	display:inline-block;
+	line-height:100%;
 }
 
 #update a { 
