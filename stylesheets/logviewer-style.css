@@ -205,6 +205,7 @@ li.line {
     background-color: #ddd; 
 }
 #say {
+	margin-top:5px;
 	padding-left:5px;
     font-size: 0.9em; 
     color: #333; 
