@@ -94,6 +94,7 @@ li.line {
 	}
 	#msg { 
 		margin-top:10px;
+		margin-bottom:0;
 		width: 80%;
 		
 	}
@@ -136,6 +137,7 @@ li.line {
 	}
 	#msg { 
 		margin-top:10px;
+		margin-bottom:0;
 		width: 80%; 
 	}
 }
@@ -183,6 +185,7 @@ li.line {
 	}
 	#msg { 
 		margin-top:10px;
+		margin-bottom:0;
 		width: 60%;
 	}
 }
