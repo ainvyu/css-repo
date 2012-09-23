@@ -186,7 +186,7 @@ li.line {
 
 #say-box {
 	display:inline-block;
-	line-height:100%;
+	top:10px;
 }
 
 #update a { 
