@@ -93,8 +93,7 @@ li.line {
 		display:inline-block;
 	}
 	#msg { 
-		width: 80%;
-		bottom:0px;
+		width: 90%;
 	}
 }
 
@@ -134,8 +133,7 @@ li.line {
 		display:inline-block;
 	}
 	#msg { 
-		width: 80%;
-		bottom:0px;
+		width: 90%;
 	}
 }
 
@@ -181,7 +179,6 @@ li.line {
 		display:inline-block;
 	}
 	#msg {
-		bottom:0px;
 		width: 60%;
 	}
 }
