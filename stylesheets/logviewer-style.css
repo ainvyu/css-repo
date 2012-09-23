@@ -94,7 +94,7 @@ li.line {
 	}
 	#msg { 
 		width: 80%;
-		
+		height:100%;
 	}
 }
 
@@ -134,7 +134,8 @@ li.line {
 		display:inline-block;
 	}
 	#msg { 
-		width: 80%; 
+		width: 80%;
+		height:100%;
 	}
 }
 
@@ -181,12 +182,10 @@ li.line {
 	}
 	#msg { 
 		width: 60%;
+		height:100%;
 	}
 }
 
-.say-box {
-	top:10px;
-}
 
 #update a { 
     font-size: 1.2em; 
