@@ -187,8 +187,8 @@ li.line {
 }
 
 .say-box {
-	position:relative;
-	margin-left:10%;
+	float:left;
+	margin-left:50px;
 }
 
 #update a { 
