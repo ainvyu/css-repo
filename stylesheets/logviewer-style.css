@@ -204,8 +204,8 @@ li.line {
 #enable-chat a:hover { 
     background-color: #ddd; 
 }
-#say { 
-    padding: 10px; 
+#say {
+	padding-left:5px;
     font-size: 0.9em; 
     color: #333; 
     background-color: #eee; 
