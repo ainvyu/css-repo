@@ -31,7 +31,7 @@ form p { margin: 0; text-indent: 0; }
 
 #content {
 	position:absolute; z-index:1;
-	top:0px; bottom:48px; left:-9999;
+	top:0px; bottom:40px; left:-9999;
 	width:100%;
 	overflow:auto;
 }
