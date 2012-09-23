@@ -8,26 +8,23 @@ body {
     font-family: Malgun Gothic, 맑은 고딕, sans-serif; 
     overflow: hidden; 
 }
+
 a { 
     color: #36c; 
     text-decoration: none; 
 }
+
 a:hover { background-color: #def; }
 h1, h2 { font-family: Helvetica, Arial, sans-serif; }
 h1 { font-size: 2.5em; margin-top: 0; }
 h2 { font-size: 1.6em; font-weight: normal; }
+
 #nav { z-index:9999; color: #333; }
 #nav a { color: #333; text-decoration: underline; }
 #nav a:hover { background-color: transparent; }
-form p { margin: 0; text-indent: 0; }
-.time { font-size: 0.85em; color: #999; width: 5%;}
-.time a { color: #999; text-decoration: none; }
-.time a:hover { background-color: #ccc; color: #fff; }
-.nickname { font-size: 0.9em; text-align: right; width: 10%; }
-.message { font-size: 0.9em; width: 85%; }
-#update a { font-size: 1.2em; text-align: center; border: 1px solid #ccc; background-color: #f4f4f4; display: block; padding: 0.5em; }
 #navbar { z-index:9999; position: fixed; top: 0; right: 0; background-color: #eee; box-shadow: 0px 2px 5px #888; padding: 10px 20px; opacity: 0.8; }
 #navbar h2 { margin: 0; }
+form p { margin: 0; text-indent: 0; }
 
 #content {
 	position:absolute; z-index:1;
@@ -208,9 +205,6 @@ li.line {
     color: #333; 
     background-color: #eee; 
 }
-
-html.js tr.selected .nickname span:hover { background-color: white; }
-html.js tr .nickname span { padding: 4px; border-radius: 8px; cursor: pointer; }
 
 ul#channel-list {
     list-style-type: none;
