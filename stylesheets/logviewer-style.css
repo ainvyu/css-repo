@@ -186,6 +186,10 @@ li.line {
 	}
 }
 
+.say-box {
+	position:relative;
+	margin-left:10%;
+}
 
 #update a { 
     font-size: 1.2em; 
