@@ -41,7 +41,7 @@ form p { margin: 0; text-indent: 0; }
     display: box;
 	position:absolute;
 	top:0;
-	left:0;
+	bottom:40px;
 	z-index:1;
 	width:100%;
 	overflow:auto;
