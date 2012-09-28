@@ -34,7 +34,7 @@ form p { margin: 0; text-indent: 0; }
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
-	position:absolute;
+	position:relative;
 	z-index:1;
 	top:0px;
 	bottom:40px;
