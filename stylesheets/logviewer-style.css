@@ -27,8 +27,18 @@ h2 { font-size: 1.6em; font-weight: normal; }
 form p { margin: 0; text-indent: 0; }
 
 #content {
-	position:absolute; z-index:1;
-	top:0px; bottom:40px; left:-9999;
+	-webkit-overflow-scrolling: touch;
+	-webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+	position:absolute;
+	z-index:1;
+	top:0px;
+	bottom:40px;
+	left:-9999;
 	width:100%;
 	overflow:auto;
 }
