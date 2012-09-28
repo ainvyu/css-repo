@@ -39,7 +39,7 @@ form p { margin: 0; text-indent: 0; }
     display: -webkit-box;
     display: -moz-box;
     display: box;
-	position:relative;
+	position:absolute;
 	z-index:1;
 	height:100%;
 	overflow:auto;
