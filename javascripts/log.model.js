@@ -139,6 +139,8 @@ function start_chat() {
   $('#enable-chat').slideUp();
   $('#say').slideDown();
   $('#msg').focus();
+  
+  go_to_bottom();
 
   unloader.reset();
   myScroll.refresh();
