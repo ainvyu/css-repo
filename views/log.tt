@@ -20,7 +20,7 @@
 	</header>
 
 	<section class="content">
-		<ul class="updates" id="updates">
+		<ul class="scroller" id="updates">
 		
 		</ul>
 	</section>

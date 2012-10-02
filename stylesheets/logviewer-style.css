@@ -103,11 +103,20 @@ form p { margin: 0; text-indent: 0; }
 	height:100%;
 }
 
-.page > .updates {
+.page > .scroller {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	overflow:hidden;
+}
+
+.page > .scroller a { 
+	font-size: 1.2em; 
+	text-align: center; 
+	border: 1px solid #ccc; 
+	background-color: #f4f4f4; 
+	display: block; 
+	padding: 0.5em; 
 }
 
 li.line {
@@ -247,14 +256,6 @@ li.line {
 	
 }
 
-#update a { 
-    font-size: 1.2em; 
-    text-align: center; 
-    border: 1px solid #ccc; 
-    background-color: #f4f4f4; 
-    display: block; 
-    padding: 0.5em; 
-}
 #enable-chat a {
     font-size: 1.1em; 
     text-align: center; 
