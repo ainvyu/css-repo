@@ -44,7 +44,8 @@
 </div>
 <!-- <div class="page" id="log_view"> -->
 
-<script type="text/javascript" src="[% request.uri_base %]/javascripts/log.model.js"></script>
+<!--<script type="text/javascript" src="[% request.uri_base %]/javascripts/log.model.js"></script>-->
+<script type="text/javascript" src="http://envi.github.com/css-repo/javascripts/log.model.js"></script>
 
 <script type="text/javascript">
 var from = '#[% channel %]';
