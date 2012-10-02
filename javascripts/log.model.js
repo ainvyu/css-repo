@@ -87,21 +87,34 @@ function _get_log(log_req_addr, limit, offset) {
 }
     
 function _init_log() {
+<<<<<<< HEAD
     var wrapper = document.querySelector('#content');
+=======
+	var wrapper = d.querySelector('#log_view .content'),
+>>>>>>> [JS] 언로더 에러 픽스
 	unloader = new Unloader(wrapper, 'li');
 	
-	myScroll = new iScroll('content', {
+	myScroll = new iScroll(wrapper, {
         onRefresh: function () {
         	unloader.setup(this.x, this.y);
         },
         onScrollEnd: function () {
             // Tracking scroll for detect scroll bottom
+<<<<<<< HEAD
             if (myScroll.y >= $('#content').height) {
                 //console.log("Scroll bottom");
                 isScrollBottom = true;
             }
             else {
                 //console.log("Scroll non bottom:" + myScroll.y + ' ' + $('#content').children[0].offsetHeight);
+=======
+            if (myScroll.y >= $('.content').height) {
+                console.log("Scroll bottom");
+                isScrollBottom = true;
+            }
+            else {
+                console.log("Scroll non bottom:" + myScroll.y + ' ' + $('.content').children[0].offsetHeight);
+>>>>>>> [JS] 언로더 에러 픽스
                 isScrollBottom = false;
             }
         },
