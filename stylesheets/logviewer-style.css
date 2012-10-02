@@ -253,6 +253,21 @@ li.line {
     background-color: #eee; 
 }
 
+div.admin-page-outline {
+    margin-left: 50px;
+}
+
+ul.admin-menu-list li {
+    position: relative;
+    width: 500px;
+    border-bottom: 1px solid #EBDDD4;
+    color: inherent;
+}
+
+ul.admin-menu-list li span.admin-page-menu {
+    font-size: 4em;
+}
+
 ul#channel-list {
     list-style-type: none;
 }
@@ -287,116 +302,112 @@ ul#channel-list {
     width: 50px;
 }
 
-
 ul#user-list {
     list-style-type: none;
 }
 
-#user-list li {
+.user-list li {
     position: relative;
-    width: 600px;
+    width: 800px;
     border-bottom: 1px solid #EBDDD4;
     color: inherent;
 }
 
-#user-list li div.user-header {
+.user-list li div.user-header {
     background-color: gray; 
     position: relative;
 }
 
-#user-list li div.user-number-header,
-#user-list li div.user-number {
-    position: absolute;
-    left: 0px;
-    width: 30px;
-    text-align: left;
-}
-
-#user-list li div.username-header, 
-#user-list li div.username {
-    position: absolute;
-    left: 0px;
-    width: 30px;
-    margin-left: 100px;
-    text-align: left;
-}
-
-#user-list li div.nickname-header,
-#user-list li div.nickname {
-    position: absolute;
-    left: 0px;
-    width: 30px;
-    margin-left: 200px;
-    text-align: left;
-}
-
-#user-list li div.usertype-header,
-#user-list li div.usertype {
-    position: absolute;
-    left: 0px;
-    width: 30px;
-    margin-left: 300px;
-    text-align: center;
-}
-
-#user-list li div.user-status-header,
-#user-list li div.user-status {
-    position: absolute;
-    left: 0px;
-    width: 30px;
-    margin-left: 400px;
-    text-align: center;
-}
-
-#user-list li div.user-button-header,
-#user-list li div.user-button {
-    position: absolute;
-    width: 30px;
-    margin-left: 500px;
-    text-align: center;
-}
-
-#userinfo li div.static,
-#userinfo li div.username,
-#userinfo li div.pw, 
-#userinfo li div.nickname {
-
-}
-
-#userinfo li div.static {
-
-}
-
-#userinfo li div.username {
-
-}
-
-#userinfo li div.password {
-
-}
-
-#userinfo li div.nickname {
-
-}
-
-#admin-page-outline {
-    
-}
-
-#channel-selector {
+.user-list li div.user {
     position: relative;
 }
 
-#channel-selector select {
-    height: 200px;
+.user-list li span.user-number-header,
+.user-list li span.user-number {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    text-align: right;
 }
 
-#channel-selector div.user-enable-channels {
-    position: absolute;
+.user-list li span.username-header, 
+.user-list li span.username {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.user-list li span.nickname-header,
+.user-list li span.nickname {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.user-list li span.usertype-header,
+.user-list li span.usertype {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+.user-list li span.user-status-header,
+.user-list li span.user-status {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+.user-list li span.user-button-header,
+.user-list li span.user-delete {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+.userinfo li span.static {
+    position: relative;
+    display: inline-block;
+}
+
+.userinfo li span.static {
+    width: 80px;
+}
+
+.userinfo li span.username, 
+.userinfo li span.password,
+.userinfo li span.nickname,
+.userinfo li span.usertype,
+.userinfo li span.status {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+}
+
+.channel-selector {
+    position: relative;
+}
+
+.channel-selector select {
     width: 100px;
+    height: 100px;
 }
 
-#channel-selector div.user-available-channels {
-    position: relative;
-    margin-left: 200;
+.channel-selector span {
+    display: inline-block;
 }
