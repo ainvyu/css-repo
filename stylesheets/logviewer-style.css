@@ -59,6 +59,7 @@ form p { margin: 0; text-indent: 0; }
     color: #333;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
+    z-index:2;
 }
 
 .page > header {
