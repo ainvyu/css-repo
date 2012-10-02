@@ -93,6 +93,7 @@ function _init_log() {
         onRefresh: function () {
         	unloader.setup(this.x, this.y);
         },
+        /*
         onScrollEnd: function () {
             // Tracking scroll for detect scroll bottom
             if (myScroll.y >= $('.content').height) {
@@ -104,6 +105,7 @@ function _init_log() {
                 isScrollBottom = false;
             }
         },
+        */
         onPositionChange: function(x, y) {
             unloader.onmove(x, y);
         }
