@@ -58,6 +58,35 @@ form p { margin: 0; text-indent: 0; }
 	box-orient: vertical;
 }
 
+.page > header,
+.page > footer {
+    -webkit-background-size: 1px 40px;
+    -moz-background-size: 1px 40px;
+    -ms-background-size: 1px 40px;
+    -o-background-size: 1px 40px;
+    background-size: 1px 40px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    color: #333;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.page > header h1,
+.page > footer h1 {
+	padding: 0;
+	margin: 0;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	overflow: hidden;
+	font-size: 16pt;
+	text-align: center;
+	text-shadow: 0 -1px rgba(0,0,0,.4);
+	text-overflow: ellipsis;
+}
+
 #content {
 	-webkit-overflow-scrolling: touch;
 	-webkit-box-flex: 1;
