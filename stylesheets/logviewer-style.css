@@ -1,0 +1,450 @@
+@charset "UTF-8";
+
+html {
+	height:100%;
+}
+
+body { 
+	font-family: Malgun Gothic, 맑은 고딕, sans-serif;
+	font-size: 13px;
+	margin:0;
+	padding:0;
+	background-color:#FFFFFF;
+	overflow:hidden;
+	position:relative;
+	height:100%;
+}
+
+a { 
+    color: #36c; 
+    text-decoration: none; 
+}
+
+a:hover { background-color: #def; }
+h1, h2 { font-family: Helvetica, Arial, sans-serif; }
+h1 { font-size: 2.5em; margin-top: 0; }
+h2 { font-size: 1.6em; font-weight: normal; }
+
+#nav { z-index:9999; color: #333; }
+#nav a { color: #333; text-decoration: underline; }
+#nav a:hover { background-color: transparent; }
+#navbar { z-index:9999; position: fixed; top: 0; right: 0; background-color: #eee; box-shadow: 0px 2px 5px #888; padding: 10px 20px; opacity: 0.8; }
+#navbar h2 { margin: 0; }
+form p { margin: 0; text-indent: 0; }
+
+/*
+	기본 view 옵션
+*/
+.page {
+	background-color:#000;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	box-orient: vertical;
+}
+
+.page > header,
+.page > footer {
+    -webkit-background-size: 1px 40px;
+    -moz-background-size: 1px 40px;
+    -ms-background-size: 1px 40px;
+    -o-background-size: 1px 40px;
+    background-size: 1px 40px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    color: #333;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    z-index:2;
+}
+
+.page > header {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid transparent !important;
+	-webkit-box-shadow:	0 1px 0 rgba(255,255,255,0.6) inset, 0 -1px 0 rgba(0,0,0,0.6) inset;
+	-moz-box-shadow:	0 1px 0 rgba(255,255,255,0.6) inset, 0 -1px 0 rgba(0,0,0,0.6) inset;
+	box-shadow: 		0 1px 0 rgba(255,255,255,0.6) inset, 0 -1px 0 rgba(0,0,0,0.6) inset;
+	background: #4a4a4a; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bdbdbd), color-stop(50%,#969696), color-stop(51%,#969696), color-stop(100%,#4a4a4a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #bdbdbd 0%, #969696 50%, #969696 51%, #4a4a4a 100%); /* Chrome10+,Safari5.1+ */
+	background:    -moz-linear-gradient(top,  #bdbdbd 0%, #969696 50%, #969696 51%, #4a4a4a 100%); /* FF3.6+ */
+	background:     -ms-linear-gradient(top,  #bdbdbd 0%, #969696 50%, #969696 51%, #4a4a4a 100%); /* IE10+ */
+	background:      -o-linear-gradient(top,  #bdbdbd 0%, #969696 50%, #969696 51%, #4a4a4a 100%); /* Opera 11.10+ */
+	background:         linear-gradient(top,  #bdbdbd 0%, #969696 50%, #969696 51%, #4a4a4a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdbdbd', endColorstr='#4a4a4a',GradientType=0 ); /* IE6-9 */
+}
+
+.page > footer {
+	
+}
+
+.page > header h1,
+.page > footer h1 {
+	padding: 0;
+	margin: 0;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	overflow: hidden;
+	font-size: 16pt;
+	text-align: center;
+	text-shadow: 0 -1px rgba(0,0,0,.4);
+	text-overflow: ellipsis;
+	color:white;
+}
+
+.page > .content {
+	overflow: auto;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	-webkit-overflow-scrolling: touch;
+	-webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	position:relative;
+	height:100%;
+}
+
+.page > .scroller {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow:hidden;
+}
+
+.page > .scroller a { 
+	font-size: 1.2em; 
+	text-align: center; 
+	border: 1px solid #ccc; 
+	background-color: #f4f4f4; 
+	display: block; 
+	padding: 0.5em; 
+}
+
+li.line {
+	width:100%;
+	height:100%;
+	list-style:none;
+	overflow:hidden;
+}
+
+@media only screen and (min-device-width: 960px) {
+	div.log_line {
+		position:relative;
+		height:100%;
+		line-height:100%;
+		padding-top:10px;
+		padding-bottom:10px;
+		border-bottom:1px solid #000000;
+		background:#333333;
+		color:#ffffff;
+	}
+	
+	span.log_time {
+		position:relative;
+		padding-left:5px;
+		padding-right:5px;
+		font-size:0.9em;
+		color:#ccc;
+		text-align:center;
+	}
+	
+	span.log_nickname {
+		position:relative;
+		display:inline-block;
+		width:6%;
+		text-align:right;
+		margin-right:10px;
+		color:
+	}
+	
+	span.log_message {
+		width:80%;
+		margin-left:10px;
+		display:inline-block;
+	}
+	#msg { 
+		width: 86%;
+	}
+}
+
+@media only screen and (max-device-width: 1024px) {
+	div.log_line {
+		position:relative;
+		height:100%;
+		line-height:100%;
+		padding-top:10px;
+		padding-bottom:10px;
+		border-bottom:1px solid #000000;
+		background:#333333;
+		color:#ffffff;
+	}
+	
+	span.log_time {
+		position:relative;
+		padding-left:5px;
+		padding-right:5px;
+		font-size:0.9em;
+		color:#ccc;
+		text-align:center;
+	}
+	
+	span.log_nickname {
+		position:relative;
+		display:inline-block;
+		width:6%;
+		text-align:right;
+		margin-right:10px;
+		color:
+	}
+	
+	span.log_message {
+		width:80%;
+		margin-left:10px;
+		display:inline-block;
+	}
+	#msg { 
+		width: 86%;
+	}
+}
+
+@media only screen and (max-device-width: 480px) {
+    #navbar { 
+        position: static; 
+        text-align: center; 
+    }
+	div.log_line {
+		position:relative;
+		height:100%;
+		line-height:100%;
+		padding-top:10px;
+		padding-bottom:10px;
+	
+		border-bottom:1px solid #000000;
+		background:#333333;
+		color:#ffffff;
+	}
+	
+	span.log_time {
+		position:relative;
+		padding-left:5px;
+		padding-right:5px;
+		font-size:0.9em;
+		width:10%;
+		color:#ccc;
+		text-align:center;
+	}
+	
+	span.log_nickname {
+		position:relative;
+		display:inline-block;
+		width:15%;
+		text-align:right;
+		margin-right:10px;
+		color:
+	}
+	
+	span.log_message {
+		width:60%;
+		margin-left:5px;
+		display:inline-block;
+	}
+	#msg {
+		width: 60%;
+	}
+}
+
+.say-box {
+	
+}
+
+#update a { 
+    font-size: 1.2em; 
+    text-align: center; 
+    border: 1px solid #ccc; 
+    background-color: #f4f4f4; 
+    display: block; 
+    padding: 0.5em; 
+}
+#enable-chat a {
+    font-size: 1.1em; 
+    text-align: center; 
+    display: block; 
+    background-color: #ADADAD; 
+}
+#enable-chat a:hover { 
+    background-color: #ddd; 
+}
+#say { 
+    color: #333; 
+    background-color: #eee; 
+}
+
+div.admin-page-outline {
+    margin-left: 50px;
+}
+
+ul.admin-menu-list li {
+    position: relative;
+    width: 500px;
+    border-bottom: 1px solid #EBDDD4;
+    color: inherent;
+}
+
+ul.admin-menu-list li span.admin-page-menu {
+    font-size: 4em;
+}
+
+ul#channel-list {
+    list-style-type: none;
+}
+#channel-list li {
+    position: relative;
+    width: 500px;
+    border-bottom: 1px solid #EBDDD4;
+    color: inherent;
+}
+
+#channel-list li div.channel-number,
+#channel-list li div.channel-name,
+#channel-list li div.channel-delete,
+#channel-list li div.channel-add-confirm {
+    
+}
+#channel-list li div.channel-number {
+    position: absolute;
+    left: 0px;
+    width: 30px;
+    text-align: center;
+}
+#channel-list li div.channel-name {
+    position: absolute;
+    margin-left: 50px;
+    text-align: left;
+    width: 200px;
+}
+#channel-list li div.channel-delete,
+#channel-list li div.channel-add-confirm {
+    margin-left: 300px;
+    width: 50px;
+}
+
+ul#user-list {
+    list-style-type: none;
+}
+
+.user-list li {
+    position: relative;
+    width: 800px;
+    border-bottom: 1px solid #EBDDD4;
+    color: inherent;
+}
+
+.user-list li div.user-header {
+    background-color: gray; 
+    position: relative;
+}
+
+.user-list li div.user {
+    position: relative;
+}
+
+.user-list li span.user-number-header,
+.user-list li span.user-number {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    text-align: right;
+}
+
+.user-list li span.username-header, 
+.user-list li span.username {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.user-list li span.nickname-header,
+.user-list li span.nickname {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.user-list li span.usertype-header,
+.user-list li span.usertype {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+.user-list li span.user-status-header,
+.user-list li span.user-status {
+    position: relative;
+    display: inline-block;
+    left: 0px;
+    width: 30px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+.user-list li span.user-button-header,
+.user-list li span.user-delete {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+.userinfo li span.static {
+    position: relative;
+    display: inline-block;
+}
+
+.userinfo li span.static {
+    width: 80px;
+}
+
+.userinfo li span.username, 
+.userinfo li span.password,
+.userinfo li span.nickname,
+.userinfo li span.usertype,
+.userinfo li span.status {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+}
+
+.channel-selector {
+    position: relative;
+}
+
+.channel-selector select {
+    width: 100px;
+    height: 100px;
+}
+
+.channel-selector span {
+    display: inline-block;
+}
