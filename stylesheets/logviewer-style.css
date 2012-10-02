@@ -20,9 +20,10 @@ a {
     text-decoration: none; 
 }
 
-a:hover {
-	background-color: #def;
-}
+a:hover { background-color: #def; }
+h1, h2 { font-family: Helvetica, Arial, sans-serif; }
+h1 { font-size: 2.5em; margin-top: 0; }
+h2 { font-size: 1.6em; font-weight: normal; }
 
 #nav { z-index:9999; color: #333; }
 #nav a { color: #333; text-decoration: underline; }
@@ -267,6 +268,14 @@ li.line {
 	
 }
 
+#update a { 
+    font-size: 1.2em; 
+    text-align: center; 
+    border: 1px solid #ccc; 
+    background-color: #f4f4f4; 
+    display: block; 
+    padding: 0.5em; 
+}
 #enable-chat a {
     font-size: 1.1em; 
     text-align: center; 
