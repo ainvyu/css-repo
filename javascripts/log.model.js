@@ -12,13 +12,13 @@ function _make_line(msg) {
 		+ ":" + _fill_zero(date.getMinutes(), 2)
 		+ ":" + _fill_zero(date.getSeconds(), 2);
 
-	var data = 	'<li id=line' + msg.no + '>';
+	var data =  '<li id=line' + msg.no + '>';
 		data += '	<div class="log_line">';
-		data +=	'		<span class="log_time" title=' + dateForm + '>' + '<a href="?scroll=line' + msg.no + '">' + dateForm + '</a>' + '</span>';
-		data +=	'		<span class="log_nickname">'+ msg.nick + '</span>';
-		data +=	'		<span class="log_message">' + _filter_data(msg.what) + '</span>';
+		data += '		<span class="log_time" title=' + dateForm + '>' + '<a href="?scroll=line' + msg.no + '">' + dateForm + '</a>' + '</span>';
+		data += '		<span class="log_nickname">'+ msg.nick + '</span>';
+		data += '		<span class="log_message">' + _filter_data(msg.what) + '</span>';
 		data += '	</div>';
-		data +=	'</li>';
+		data += '</li>';
 
 	return data;
 }
