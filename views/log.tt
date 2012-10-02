@@ -1,0 +1,174 @@
+<div class="page">
+<div id="navbar">
+<h2>Log of [% channel %]</h2>
+<p id="nav">
+   <a href="/[% channel %]/[% prev_day %]">전날</a> - <a href="/[% channel %]/[% today %]">오늘</a> - <a href="/[% channel %]/[% next_day %]">다음날</a> / <a href="javascript:go_to_bottom();">맨 아래로 &darr;</a>
+</p>
+
+<form method="get" action="search" id="search">
+<p>
+   <input type="text" name="q" value="" />
+   <input type="submit" value="찾기" />
+</p>
+</form>
+</div>
+<!-- <div id="navbar"> -->
+
+<div id="content">
+  <ul class="updates" id="updates">
+    
+  </ul>
+</div>
+<!-- <div id="content"> -->
+
+<!-- 대화창 -->
+<div id="footer">
+  <div id="enable-chat">
+    <a href="#">대화 시작</a>
+  </div>
+  
+  <form method="post" action="none" id="form_say">
+    <div id="say" style="display: none">
+      <!-- input text로 하면 안드로이드에서 Go 누를 시 스크린 키보드가 닫힘 -->
+      <span class="logout-button"><a href="/logout">로그아웃</a></span>
+      <span class="say-box"><textarea name="msg" id="msg" rows="1" col="100"></textarea></span>
+      <span class="send-button"><button id="submit_msg">보내기</button></span>
+    </div>
+  </form>
+</div>
+<!-- <div id="footer"> -->
+
+<script type="text/javascript" src="[% request.uri_base %]/javascripts/log.model.js"></script>
+
+<script type="text/javascript">
+var from = '#[% channel %]';
+var username = '[% username %]';
+var nickname = '[% nickname %]';
+
+var cur_url = document.URL;
+var today = '[% today %]';
+var cur_view_date = '[% cur_view_date %]';
+var log_data_addr = '/log_data/[% channel %]/[% cur_view_date %]';
+
+var scroll_line = '[% scroll_line %]';
+var isScrollBottom = false;
+var isConnected = false;
+var RETRY_INTERVAL = 4000;
+var timeout;
+var fireHoseUrl = location.host;
+
+var last_log_no = 0;
+
+var unloader;
+var myScroll;
+
+// initiallize log viewer.
+_init_log();
+
+var socket;
+console.log('socket.io connect to ' + fireHoseUrl);
+if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+  console.log('socket.io connect method: xhr-polling, jsonp-polling');
+  socket = io.connect(fireHoseUrl, {
+    'resource': 'socket.io',
+    'transports': ["htmlfile", "xhr-polling", "websocket", "flashsocket"],
+    'reconnect': true,
+    'reconnection delay': 500,
+    'max reconnection attempts': 32,
+  });
+}
+else {
+  console.log('socket.io connect method: websocket');
+  socket = io.connect(fireHoseUrl, {
+    'resource': 'socket.io',
+    'reconnect': true,
+    'reconnection delay': 500,
+    'max reconnection attempts': 32,
+  });
+}
+
+if (today == cur_view_date) {
+  socket.emit('connect', { from: from });
+}
+
+socket.on( 'connect', function() {
+  isConnected = true;
+  clearTimeout(timeout);
+});
+
+socket.on( 'disconnect', function() {
+  isConnected = false;
+
+  console.log('disconnected.');
+  console.log('retry');
+//  retryConnectOnFailure(RETRY_INTERVAL);
+});
+
+var retryConnectOnFailure = function(retryInMilliseconds) {
+    setTimeout(function() {
+        if (!connected) {
+            $.get('/ping', function(data) {
+                connected = true;
+                window.location.href = unescape(window.location.pathname);
+                });
+
+            retryConnectOnFailure(retryInMilliseconds);
+            }
+    }, retryInMilliseconds);
+
+    //retryConnectOnFailure(RETRY_INTERVAL);
+}
+socket.on('pong', function() {
+  var date = new Date;
+  console.log(date + ': pong');
+});
+
+// Keepalive routine (per 3minute),
+// socket.io doing auto disconnect after 5minute idle time.
+$(function() {
+  timer = setInterval(function () {
+    socket.emit('ping');
+  },
+  10*1000 /* miliseconds */);
+});
+
+// Priodic iScroll refresh for activate/deactivate screen keyboard on mobile browser
+$(function() {
+  timer = setInterval(function () {
+      unloader.reset();
+      myScroll.refresh();
+  },
+  1*1000 /* miliseconds */);
+});
+
+socket.on('on_chat.privmsg', function(msg) {
+  var msg_json = JSON.parse(msg);
+  console.log(msg_json);
+  _append_log(false, msg_json);
+});
+
+// Tracking scroll for detect scroll bottom
+$(window).scroll(function () {
+  var scrollPos = $(window).scrollTop();
+  if (scrollPos >= ($(document).height() - $(window).height())) {
+    isScrollBottom = true;
+  }
+  else {
+    isScrollBottom = false;
+  }
+});
+
+$('#enable-chat a').click(function() {
+  start_chat();
+  return false;
+});
+
+$(window).focus(function() {
+  console.log("refresh log event for mobile browser");
+//  _get_log(log_data_addr, 9999999, last_log_no+1);
+});
+
+</script>
+
+<a name="bottom"></a>
+</div>
