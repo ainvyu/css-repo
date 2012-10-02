@@ -86,19 +86,21 @@ function _get_log(log_req_addr, limit, offset) {
 }
     
 function _init_log() {
-	var wrapper = d.querySelector('#log_view .content'),
+    var wrapper = document.querySelector('#log_view .content');
 	unloader = new Unloader(wrapper, 'li');
 	
 	myScroll = new iScroll(wrapper, {
         onRefresh: function () {
         	unloader.setup(this.x, this.y);
+        },
+        onScrollEnd: function () {
             // Tracking scroll for detect scroll bottom
             if (myScroll.y >= $('.content').height) {
-                console.log("Scroll bottom");
+                //console.log("Scroll bottom");
                 isScrollBottom = true;
             }
             else {
-                console.log("Scroll non bottom:" + myScroll.y + ' ' + $('.content').children[0].offsetHeight);
+                //console.log("Scroll non bottom:" + myScroll.y + ' ' + $('#content').children[0].offsetHeight);
                 isScrollBottom = false;
             }
         },
@@ -141,12 +143,14 @@ function start_chat() {
 }
 
 $('#msg').focus(function(event) {
+    console.log('chatting flag on');
     isChatting = true;
     unloader.reset();
     myScroll.refresh();
 });
 
 $('#msg').focusout(function(event) {
+    console.log('chatting flag off');
     isChatting = false;
     unloader.reset();
     myScroll.refresh();
@@ -179,10 +183,13 @@ function submit_say(msg) {
     return;
   }
 
-  var msg_data = { what: msg,
-                   time: Math.floor(new Date().getTime() / 1000),
-                   channel: from,
-                   type: 0 };
+  var msg_data = { 
+      nick: nickname,
+      what: msg,
+      time: Math.floor(new Date().getTime() / 1000),
+      channel: from,
+      type: 0 
+  };
 
   socket.emit('chat.privmsg', msg_data);
 }
