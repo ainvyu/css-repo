@@ -115,7 +115,7 @@ form p { margin: 0; text-indent: 0; }
 	height:100%;
 }
 
-.page > .scroller {
+.page > ul.scroller {
 	margin: 0;
 	padding: 0;
 	list-style: none;
