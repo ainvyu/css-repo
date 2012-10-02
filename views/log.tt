@@ -1,42 +1,48 @@
-<div class="page">
-<div id="navbar">
-<h2>Log of [% channel %]</h2>
-<p id="nav">
-   <a href="/[% channel %]/[% prev_day %]">전날</a> - <a href="/[% channel %]/[% today %]">오늘</a> - <a href="/[% channel %]/[% next_day %]">다음날</a> / <a href="javascript:go_to_bottom();">맨 아래로 &darr;</a>
-</p>
+<div class="page" id="log_view">
+	<!--
+	<div id="navbar">
+		<h2>Log of [% channel %]</h2>
+	<p id="nav">
+	   <a href="/[% channel %]/[% prev_day %]">전날</a> - <a href="/[% channel %]/[% today %]">오늘</a> - <a href="/[% channel %]/[% next_day %]">다음날</a> / <a href="javascript:go_to_bottom();">맨 아래로 &darr;</a>
+	</p>
+	
+	<form method="get" action="search" id="search">
+		<p>
+		   <input type="text" name="q" value="" />
+		   <input type="submit" value="찾기" />
+		</p>
+	</form>
+	</div>
+	-->
+	<!-- <div id="navbar"> -->
+	<header>
+		<h1>Log of [% channel %]</h1>
+	</header>
 
-<form method="get" action="search" id="search">
-<p>
-   <input type="text" name="q" value="" />
-   <input type="submit" value="찾기" />
-</p>
-</form>
+	<section class="content">
+		<ul class="updates" id="updates">
+		
+		</ul>
+	</section>
+	<!-- <section class="content"> -->
+	
+	<footer>
+		<div id="enable-chat">
+			<a href="#">대화 시작</a>
+		</div>
+	  
+		<form method="post" action="none" id="form_say">
+			<div id="say" style="display: none">
+				<!-- input text로 하면 안드로이드에서 Go 누를 시 스크린 키보드가 닫힘 -->
+				<span class="logout-button"><a href="/logout">로그아웃</a></span>
+				<span class="say-box"><textarea name="msg" id="msg" rows="1" col="100"></textarea></span>
+				<span class="send-button"><button id="submit_msg">보내기</button></span>
+			</div>
+		</form>
+	</footer>
+	<!-- <footer> -->
 </div>
-<!-- <div id="navbar"> -->
-
-<div id="content">
-  <ul class="updates" id="updates">
-    
-  </ul>
-</div>
-<!-- <div id="content"> -->
-
-<!-- 대화창 -->
-<div id="footer">
-  <div id="enable-chat">
-    <a href="#">대화 시작</a>
-  </div>
-  
-  <form method="post" action="none" id="form_say">
-    <div id="say" style="display: none">
-      <!-- input text로 하면 안드로이드에서 Go 누를 시 스크린 키보드가 닫힘 -->
-      <span class="logout-button"><a href="/logout">로그아웃</a></span>
-      <span class="say-box"><textarea name="msg" id="msg" rows="1" col="100"></textarea></span>
-      <span class="send-button"><button id="submit_msg">보내기</button></span>
-    </div>
-  </form>
-</div>
-<!-- <div id="footer"> -->
+<!-- <div class="page" id="log_view"> -->
 
 <script type="text/javascript" src="[% request.uri_base %]/javascripts/log.model.js"></script>
 
@@ -171,4 +177,3 @@ $(window).focus(function() {
 </script>
 
 <a name="bottom"></a>
-</div>
