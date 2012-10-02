@@ -78,6 +78,8 @@ form p { margin: 0; text-indent: 0; }
 	background:      -o-linear-gradient(top,  #bdbdbd 0%, #969696 50%, #969696 51%, #4a4a4a 100%); /* Opera 11.10+ */
 	background:         linear-gradient(top,  #bdbdbd 0%, #969696 50%, #969696 51%, #4a4a4a 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdbdbd', endColorstr='#4a4a4a',GradientType=0 ); /* IE6-9 */
+	
+	opacity:0.5;
 }
 
 .page > footer {
