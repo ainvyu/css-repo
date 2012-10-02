@@ -115,14 +115,14 @@ form p { margin: 0; text-indent: 0; }
 	height:100%;
 }
 
-.page > ul.scroller {
+ul#updates .scroller {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	overflow:hidden;
 }
 
-.page > .scroller a { 
+ul#updates .scroller a { 
 	font-size: 1.2em; 
 	text-align: center; 
 	border: 1px solid #ccc; 
