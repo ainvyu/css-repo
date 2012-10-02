@@ -122,7 +122,7 @@ form p { margin: 0; text-indent: 0; }
 	overflow:hidden;
 }
 
-#updates a { 
+.page > .scroller a { 
 	font-size: 1.2em; 
 	text-align: center; 
 	border: 1px solid #ccc; 
